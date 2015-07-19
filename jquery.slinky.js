@@ -43,6 +43,7 @@
               header.$parent.css('paddingTop', header.height);
               header.$
                 .css('position', 'absolute')
+				.css('z-index', '-1')
                 .css(position, header[position])
                 .css(position == 'top' ? 'bottom' : 'top', '');
               header.position = position;
@@ -51,6 +52,7 @@
           else {
             header.$parent.css('paddingTop', '');
             header.$.css('position', '');
+			header.$.css('z-index', '');
             header.position = '';
           }
         });
@@ -77,7 +79,7 @@
           header.top = i > 0 ? (headers[i - 1].top + headers[i - 1].height / 2) : 0;
 
           i = headers.length - i - 1;
-          headers[i].bottom = i < headers.length - 1 ? (headers[i + 1].bottom + headers[i + 1].height) : 0;
+          headers[i].bottom = i < headers.length - 1 ? (headers[i + 1].bottom + headers[i + 1].height / 2) : -headers[i].height / 2;
         });
 
         refresh();
