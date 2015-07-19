@@ -74,7 +74,7 @@
 			  var obj = {};
 			  obj[position] = header[headerPosition];
 			  header.$.animate(obj, {
-				duration: 100,
+				duration: 0,
 				queue: false				
 			  });
 		  }
