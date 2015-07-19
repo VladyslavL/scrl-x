@@ -30,7 +30,7 @@
           var position = '';
           var top = header.$parent.position().top;
           
-          if (top <= header.top) {
+          if (top <= header.top + header.height / 2) {
             position = 'top';
           }
           else if (top + header.height >= scrollerHeight - header.bottom) {
@@ -81,7 +81,7 @@
           i = headers.length - i - 1;
           headers[i].bottom = i < headers.length - 1 ? (headers[i + 1].bottom + headers[i + 1].height / 2) : -headers[i].height / 2;
         });
-
+		
         refresh();
       }
 
