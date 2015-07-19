@@ -60,23 +60,22 @@
           }
           else {
 			if(header.position == 'top' && position == 'middle') {
-				console.log(header, header.$parent.offset().top)
 				var obj = {};
 				obj[header.position] = header.$parent.offset().top;
-				console.log(obj);
 				header.$.animate(obj, {
-					duration: 300,
+					duration: 100,
 					queue: false,
 					complete: function() {
 						header.$parent.css('paddingTop', '');
 						header.$.css('position', '');
+						header.position = position;
 					}
 				});
 			} else {
 				header.$parent.css('paddingTop', '');
 				header.$.css('position', '');
+				header.position = position;
 			}
-			header.position = position;
           }
         });
       }
