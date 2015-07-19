@@ -59,23 +59,23 @@
             }
           }
           else {
-			if(header.position == 'top' && position == 'middle') {
-				var obj = {};
-				obj[header.position] = header.$parent.offset().top;
-				header.$.animate(obj, {
-					duration: 100,
-					queue: false,
-					complete: function() {
-						header.$parent.css('paddingTop', '');
-						header.$.css('position', '');
-						header.position = position;
-					}
-				});
-			} else {
+			// if(header.position == 'top' && position == 'middle') {
+				// var obj = {};
+				// obj[header.position] = header.$parent.offset().top;
+				// header.$.animate(obj, {
+					// duration: 100,
+					// queue: false,
+					// complete: function() {
+						// header.$parent.css('paddingTop', '');
+						// header.$.css('position', '');
+						// header.position = position;
+					// }
+				// });
+			// } else {
 				header.$parent.css('paddingTop', '');
 				header.$.css('position', '');
 				header.position = position;
-			}
+			// }
           }
         });
       }
