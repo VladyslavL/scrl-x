@@ -37,7 +37,6 @@
           } else {
 			position = 'middle';
 		  }
-		  
           if (position && position != 'middle') {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
@@ -59,24 +58,26 @@
             }
           }
           else {
-			// if(header.position == 'top' && position == 'middle') {
-				// var obj = {};
-				// obj[header.position] = header.$parent.offset().top;
-				// header.$.animate(obj, {
-					// duration: 100,
-					// queue: false,
-					// complete: function() {
-						// header.$parent.css('paddingTop', '');
-						// header.$.css('position', '');
-						// header.position = position;
-					// }
-				// });
-			// } else {
-				header.$parent.css('paddingTop', '');
-				header.$.css('position', '');
-				header.position = position;
-			// }
+			header.$parent.css('paddingTop', '');
+			header.$.css('position', '');
+			header.position = position;
           }
+		  
+		  if(position == 'bottom' && header.position == 'bottom') {
+			var headerPosition = $scroller.scrollTop() === 0 ? position + 'Full' : position;
+			header.$parent.css('paddingTop', header.height);
+			  header.$
+				.css('position', 'absolute')
+				.css(position == 'top' ? 'bottom' : 'top', '');
+			  header.position = position;
+			  
+			  var obj = {};
+			  obj[position] = header[headerPosition];
+			  header.$.animate(obj, {
+				duration: 100,
+				queue: false				
+			  });
+		  }
         });
       }
 
@@ -102,6 +103,7 @@
 
           i = headers.length - i - 1;
           headers[i].bottom = i < headers.length - 1 ? (headers[i + 1].bottom + headers[i + 1].height / 2) : -headers[i].height / 2;
+		  headers[i].bottomFull = i < headers.length - 1 ? (headers[i + 1].bottomFull + headers[i + 1].height) : 0;
         });
 		
         refresh();
