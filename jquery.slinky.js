@@ -40,7 +40,6 @@
           if (position && position != 'middle') {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
-              header.$parent.css('paddingTop', header.height);
               header.$
                 .css('position', 'absolute')
                 .css(position, position == 'top' ? header.$parent.offset().top : header[position])
@@ -48,23 +47,30 @@
               header.position = position;
 			  
 			  if(position == 'top') {
-				  var obj = {};
-				  obj[position] = header[position];
-				  header.$.animate(obj, {
+				header.$back.css({
+					'display': 'block',
+					'height': header.height,
+					'background': header.$.css('background-color')
+				});
+				
+				var obj = {};
+				obj[position] = header[position];
+				header.$.animate(obj, {
 					duration: 100,
 					queue: false				
-				  });
+				});
 			  }
             }
           }
           else {
+			header.$back.hide();
 			header.$parent.css('paddingTop', '');
 			header.$.css('position', '');
 			header.position = position;
           }
 		  
 		  if(position == 'bottom' && header.position == 'bottom') {
-			var headerPosition = $scroller.scrollTop() === 0 ? position + 'Full' : position;
+			var headerPosition = $scroller.scrollTop() < 15 ? position + 'Full' : position;
 			header.$parent.css('paddingTop', header.height);
 			  header.$
 				.css('position', 'absolute')
@@ -74,7 +80,7 @@
 			  var obj = {};
 			  obj[position] = header[headerPosition];
 			  header.$.animate(obj, {
-				duration: 0,
+				duration: 40,
 				queue: false				
 			  });
 		  }
@@ -91,6 +97,7 @@
           headers.push({
             $: $header,
             $parent: $section,
+			$back: $section.find('.back-header'),
             height: $header.outerHeight(),
             position: '' // can be 'top' or 'bottom'
           });
