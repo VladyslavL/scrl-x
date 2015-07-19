@@ -68,7 +68,7 @@
 				obj[header.position] = header.$parent.offset().top;
 				console.log(obj);
 				header.$.animate(obj, {
-					duration: 100,
+					duration: 300,
 					queue: false,
 					complete: function() {
 						header.$parent.css('paddingTop', '');
