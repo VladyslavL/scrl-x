@@ -73,6 +73,10 @@ section, header {
   max-width: 400px;
 }
 
+header {
+	height: 90px;
+}
+
 section {
   margin: 0 auto;
 }
