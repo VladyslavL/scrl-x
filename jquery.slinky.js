@@ -21,7 +21,6 @@
       }
       $element.data(pluginName, true);
 
-      
       var $scroller = $element.children().first();
       var $sections, headers, scrollerHeight, timer;
 
@@ -29,14 +28,14 @@
         headers.forEach(function (header) {
           var position = '';
           var top = header.$parent.position().top;
-          
+		  
           if (top <= header.top + header.height / 2) {
             position = 'top';
           }
           else if (top + header.height >= scrollerHeight - header.bottom) {
             position = 'bottom';
           }
-
+		  
           if (position) {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
@@ -44,9 +43,18 @@
               header.$
                 .css('position', 'absolute')
 				.css('z-index', '1')
-                .css(position, header[position])
+                .css(position, position == 'top' ? header.$parent.offset().top : header[position])
                 .css(position == 'top' ? 'bottom' : 'top', '');
               header.position = position;
+			  
+			  if(position == 'top') {
+				  var obj = {};
+				  obj[position] = header[position];
+				  header.$.animate(obj, {
+					duration: 100,
+					queue: false				
+				  });
+			  }
             }
           }
           else {
