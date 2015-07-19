@@ -34,7 +34,6 @@
 			direction = "UP";
 		}
 		lastScroll = st;
-		console.log(direction)
 		
         headers.forEach(function (header) {
           var position = '';
@@ -50,7 +49,6 @@
 		  }
 		  
 		  if(header.position == 'top' && position == 'top' && direction == "UP") {
-			$(window).on('scroll', checkDirection);
 			header.$parent.css('paddingTop', '');		  
 			header.$back.css({
 				'display': 'block',
