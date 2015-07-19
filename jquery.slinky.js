@@ -37,22 +37,24 @@
           } else {
 			position = 'middle';
 		  }
+		  
+		  if(header.position == 'top' && position == 'top') {		  
+			header.$back.css({
+				'display': 'block',
+				'height': header.height,
+				'background': header.$.css('background-color')
+			});
+		  }
           if (position && position != 'middle') {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
               header.$
                 .css('position', 'absolute')
                 .css(position, position == 'top' ? header.$parent.offset().top : header[position])
-                .css(position == 'top' ? 'bottom' : 'top', '');
-              header.position = position;
+                .css(position == 'top' ? 'bottom' : 'top', '');              
+			  header.position = position;
 			  
-			  if(position == 'top') {
-				header.$back.css({
-					'display': 'block',
-					'height': header.height,
-					'background': header.$.css('background-color')
-				});
-				
+			  if(position == 'top') {				
 				var obj = {};
 				obj[position] = header[position];
 				header.$.animate(obj, {
@@ -63,7 +65,9 @@
             }
           }
           else {
-			header.$back.hide();
+			if(header.position != 'top' || position != 'top') {
+				header.$back.hide();
+			}
 			header.$parent.css('paddingTop', '');
 			header.$.css('position', '');
 			header.position = position;
