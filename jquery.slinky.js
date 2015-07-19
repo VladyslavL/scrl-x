@@ -12,9 +12,9 @@
 
   var slinky = $.fn[pluginName] = function (options) {
     options = $.extend({}, slinky.options, options);
-
+	
     return this.each(function () {
-      var $element = $(this);
+	  var $element = $(this);
       // Prevent multiple instantiations on the same element.
       if ($element.data(pluginName)) {
         return;
@@ -22,9 +22,20 @@
       $element.data(pluginName, true);
 
       var $scroller = $element.children().first();
-      var $sections, headers, scrollerHeight, timer;
+      var $sections, headers, scrollerHeight, timer,
+		lastScroll = 0,
+		direction = 'UP';
 
       function refresh() {
+		var st = $(this).scrollTop();
+		if (st > lastScroll){
+			direction = "DOWN";
+		} else {
+			direction = "UP";
+		}
+		lastScroll = st;
+		console.log(direction)
+		
         headers.forEach(function (header) {
           var position = '';
           var top = header.$parent.position().top;
@@ -38,7 +49,8 @@
 			position = 'middle';
 		  }
 		  
-		  if(header.position == 'top' && position == 'top') {
+		  if(header.position == 'top' && position == 'top' && direction == "UP") {
+			$(window).on('scroll', checkDirection);
 			header.$parent.css('paddingTop', '');		  
 			header.$back.css({
 				'display': 'block',
