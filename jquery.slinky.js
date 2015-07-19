@@ -43,7 +43,7 @@
               header.$parent.css('paddingTop', header.height);
               header.$
                 .css('position', 'absolute')
-				.css('z-index', '-1')
+				.css('z-index', '1')
                 .css(position, header[position])
                 .css(position == 'top' ? 'bottom' : 'top', '');
               header.position = position;
