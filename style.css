@@ -89,10 +89,6 @@ h4 {
   text-transform: uppercase;
 }
 
-section:first-child {
-  margin-top: 6.25%;
-}
-
 section:last-child {
   margin-bottom: 6.25%;
 }
