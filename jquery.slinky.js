@@ -38,7 +38,8 @@
 			position = 'middle';
 		  }
 		  
-		  if(header.position == 'top' && position == 'top') {		  
+		  if(header.position == 'top' && position == 'top') {
+			header.$parent.css('paddingTop', '');		  
 			header.$back.css({
 				'display': 'block',
 				'height': header.height,
@@ -48,6 +49,7 @@
           if (position && position != 'middle') {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
+			  header.$parent.css('paddingTop', header.height);
               header.$
                 .css('position', 'absolute')
                 .css(position, position == 'top' ? header.$parent.offset().top : header[position])
