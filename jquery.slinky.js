@@ -28,20 +28,17 @@
         headers.forEach(function (header) {
           var position = '';
           var top = header.$parent.position().top;
-		  var currentPosition = header.$.data('position');
 		  
           if (top <= header.top + header.height / 2) {
             position = 'top';
-			header.$.data('position', 'top');
           }
           else if (top + header.height >= scrollerHeight - header.bottom) {
             position = 'bottom';
-			header.$.data('position', 'bottom');
           } else {
-			header.$.data('position', 'middle');
+			position = 'middle';
 		  }
 		  
-          if (position) {
+          if (position && position != 'middle') {
             // Don’t do anything if the header is already positioned properly.
             if (header.position != position) {
               header.$parent.css('paddingTop', header.height);
@@ -62,7 +59,7 @@
             }
           }
           else {
-			if(currentPosition == 'top' && header.$.data('position') == 'middle') {
+			if(header.position == 'top' && position == 'middle') {
 				console.log(header, header.$parent.offset().top)
 				var obj = {};
 				obj[header.position] = header.$parent.offset().top;
@@ -73,14 +70,13 @@
 					complete: function() {
 						header.$parent.css('paddingTop', '');
 						header.$.css('position', '');
-						header.position = '';
 					}
 				});
 			} else {
 				header.$parent.css('paddingTop', '');
 				header.$.css('position', '');
-				header.position = '';
 			}
+			header.position = position;
           }
         });
       }
