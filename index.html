@@ -10,7 +10,7 @@
   <body>
     <main>
       <nav>
-        <section>
+        <section class="no-scroll">
           <header style="height: 0"></header>
           <article>
             <small class="arrow">Scroll</small>
@@ -182,6 +182,54 @@
 		
 		$('section').first().css('height', $(window).outerHeight() - outerHeight - 20);
 		$('main').slinky();
+		
+		$("section > header").on('click', function() {
+		  var section = $(this).parent("section").not('.no-scroll');
+		  var sections = [];
+		  var selectSections = section.prevAll('section');
+		  for(var i = selectSections.length; i > 0; i--) {
+		   var sec = $(selectSections[i - 1]);
+		   var secHeader = sec.find('header');		   
+		   if(secHeader.inlineStyle("position") == "absolute"
+			&& secHeader.inlineStyle("top").length == 0) {
+				sections.push(sec);
+		   }
+		  }
+		  sections.push(section);
+		  
+		  var scroller = $('nav');
+		  for(var j = 0; j < sections.length; j++) {
+		   if(sections[j] == undefined) {
+			return;
+		   }
+		   
+		   scroller.scrollTo(sections[j], {duration : 200, offsetTop : 0}, function() {
+			section.scroll();    
+		   });
+		  }
+		 });
+		 
+		 $.fn.scrollTo = function( target, options, callback ){
+		  if(typeof options == 'function' && arguments.length == 2){ callback = options; options = target; }
+		  var settings = $.extend({
+			scrollTarget  : target,
+			offsetTop     : 50,
+			duration      : 500,
+			easing        : 'swing'
+		  }, options);
+		  return this.each(function(){
+			var scrollPane = $(this);
+			var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
+			var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
+			scrollPane.animate({scrollTop : scrollY }, parseInt(settings.duration), settings.easing, function(){
+			  if (typeof callback == 'function') { callback.call(this); }
+			});
+		  });
+		}
+		
+		$.fn.inlineStyle = function (prop) {
+			return this.prop("style")[$.camelCase(prop)];
+		};
     </script>
   </body>
 </html>
