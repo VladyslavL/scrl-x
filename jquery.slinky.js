@@ -62,7 +62,7 @@
 			  header.$parent.css('paddingTop', header.height);
               header.$
                 .css('position', 'absolute')
-                .css(position, position == 'top' ? header.$parent.offset().top : header[position])
+                .css(position, position == 'top' ? header.$parent.position().top : header[position])
                 .css(position == 'top' ? 'bottom' : 'top', '');              
 			  header.position = position;
 			  
