@@ -208,10 +208,10 @@
     $(".section > .header").on('click', function () {
         var section = $(this).parent().not('.no-scroll');
         var sections = [];
-        var selectSections = section.prevAll('section');
+        var selectSections = section.prevAll('.section');
         for (var i = selectSections.length; i > 0; i--) {
             var sec = $(selectSections[i - 1]);
-            var secHeader = sec.find('header');
+            var secHeader = sec.find('.header');
             if (secHeader.inlineStyle("position") == "absolute"
                     && secHeader.inlineStyle("top").length == 0) {
                 sections.push(sec);
