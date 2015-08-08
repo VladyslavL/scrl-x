@@ -118,6 +118,7 @@
                 $sections.each(function () {
                     var $section = $(this);
                     var $header = $section.children().first();
+                    $header.css('width', $section.width());
                     headers.push({
                         $: $header,
                         $parent: $section,
