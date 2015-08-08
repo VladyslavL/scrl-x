@@ -35,7 +35,7 @@
                 }
                 lastScroll = st;
 
-                headers.forEach(function (header) {
+                $.each(headers, function (i, header) {
                     var position = '';
                     var top = header.$parent.position().top;
 
@@ -139,7 +139,7 @@
 
                 // Pre-calculate the offsets that the headers would have
                 // from the top or bottom of the scroller.
-                headers.forEach(function (header, i) {
+                $.each(headers, function (i, header) {
                     header.top = i > 0 ? (headers[i - 1].top + headers[i - 1].height / 2) : 0;
 
                     var j = headers.length - i - 1;
@@ -152,7 +152,7 @@
 
             function recalcHeaders(hoverElem) {
                 var prevHover = false;
-                headers.forEach(function (header, i) {
+                $.each(headers, function (i, header) {
                     if (hoverElem && header.$[0] === hoverElem[0]) {
                         header.top = i > 0 ? (headers[i - 1].top + headers[i - 1].height / 2) : 0;
                         prevHover = true;
