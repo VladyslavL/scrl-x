@@ -177,7 +177,8 @@
     <script>
 		var outerHeight = 0;
 		$('header').each(function() {
-			outerHeight += $(this).outerHeight();
+//			outerHeight += $(this).outerHeight();
+			outerHeight += $(this).outerHeight() / 2;
 		});
 		
 		$('section').first().css('height', $(window).outerHeight() - outerHeight - 20);
