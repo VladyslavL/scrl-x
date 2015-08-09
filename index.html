@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
     <meta charset="utf-8">
     <title>Slinky.js</title>
     <meta name="description" content="Scrolling navigation component for web apps">
@@ -198,8 +198,7 @@
 <script>
     var outHeight = 0;
     $('.header').each(function () {
-//			outerHeight += $(this).outerHeight();
-        outHeight = outHeight + $(this).outerHeight() / 2;
+        outHeight += $(this).outerHeight() * 0.7;
     });
 
     $('.section').first().css('height', $(window).outerHeight() - outHeight - 20);

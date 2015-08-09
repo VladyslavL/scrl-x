@@ -39,10 +39,11 @@
                     var position = '';
                     var top = header.$parent.position().top;
 
+                    var bottom = st < 15 ? 'bottomPreview' : 'bottom';
                     if (top <= header.top + header.height / 2) {
                         position = 'top';
                     }
-                    else if (top + header.height >= scrollerHeight - header.bottom) {
+                    else if (top + header.height >= scrollerHeight - header[bottom]) {
                         position = 'bottom';
                     } else {
                         position = 'middle';
@@ -93,8 +94,7 @@
                     }
 
                     if (position == 'bottom' && header.position == 'bottom') {
-                        //var headerPosition = $scroller.scrollTop() < 15 ? position + 'Full' : position;
-                        var headerPosition = position;
+                        var headerPosition = $scroller.scrollTop() < 15 ? position + 'Preview' : position;
                         header.$parent.css('paddingTop', header.height);
                         header.$
                             .css('position', 'absolute')
@@ -144,7 +144,7 @@
 
                     var j = headers.length - i - 1;
                     headers[j].bottom = j < headers.length - 1 ? (headers[j + 1].bottom + headers[j + 1].height / 2) : -headers[j].height / 2;
-                    headers[j].bottomFull = j < headers.length - 1 ? (headers[j + 1].bottomFull + headers[j + 1].height) : 0;
+                    headers[j].bottomPreview = j < headers.length - 1 ? (headers[j + 1].bottomPreview + headers[j + 1].height * 0.7) : -headers[j].height * 0.3;
                 });
 
                 refresh();
@@ -157,17 +157,18 @@
                         header.top = i > 0 ? (headers[i - 1].top + headers[i - 1].height / 2) : 0;
                         prevHover = true;
                     } else {
-                        header.top = i > 0 ? (headers[i - 1].top + (prevHover ? headers[i - 1].height : headers[i - 1].height / 2)) : 0;
+                        header.top = i > 0 ? (headers[i - 1].top + (prevHover ? headers[i - 1].height * 0.7 : headers[i - 1].height / 2)) : 0;
                         prevHover = false;
                     }
 
                     var j = headers.length - i - 1;
                     if (hoverElem && headers[j].$[0] === hoverElem[0]) {
-                        headers[j].bottom = j < headers.length - 1 ? (headers[j + 1].bottom + headers[j + 1].height) : 0;
+                        headers[j].bottom = j < headers.length - 1 ? (headers[j + 1].bottom + headers[j + 1].height * 0.7) : -headers[j].height * 0.3;
+                        headers[j].bottomPreview = j < headers.length - 1 ? (headers[j + 1].bottomPreview + headers[j + 1].height) : 0;
                     } else {
                         headers[j].bottom = j < headers.length - 1 ? (headers[j + 1].bottom + headers[j + 1].height / 2) : -headers[j].height / 2;
+                        headers[j].bottomPreview = j < headers.length - 1 ? (headers[j + 1].bottomPreview + headers[j + 1].height * 0.7) : -headers[j].height * 0.3;
                     }
-                    headers[j].bottomFull = j < headers.length - 1 ? (headers[j + 1].bottomFull + headers[j + 1].height) : 0;
                 });
             }
 
