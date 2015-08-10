@@ -42,14 +42,14 @@ $(document).ready(function() {
     var outHeight2 = 0;
     var outHeight3 = 0;
     $('#pv .header').each(function () {
-        outHeight3 = outHeight3 + $(this).height() / 2;
+        outHeight3 = outHeight3 + $(this).outerHeight() * 0.7;
     });
-    $('#pv .section').first().css('height', $(window).outerHeight() - outHeight3 - 60);
+    $('#pv .section').first().css('height', $(window).outerHeight() - outHeight3 + 10);
 
     $('#mf .header').each(function () {
-        outHeight2 = outHeight2 + $(this).height() / 2;
+        outHeight2 = outHeight2 + $(this).outerHeight() * 0.7;
     });
-    $('#mf .section').first().css('height', $(window).outerHeight() - outHeight2 - 60);
+    $('#mf .section').first().css('height', $(window).outerHeight() - outHeight2 + 10);
 
     $('.slinky').slinky();
 
