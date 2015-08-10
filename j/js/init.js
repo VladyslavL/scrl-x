@@ -44,12 +44,12 @@ $(document).ready(function() {
     $('#pv .header').each(function () {
         outHeight3 = outHeight3 + $(this).height() / 2;
     });
-    $('#pv .section').first().css('height', $('#pv').outerHeight() - outHeight3);
+    $('#pv .section').first().css('height', $(window).outerHeight() - outHeight3 - 60);
 
     $('#mf .header').each(function () {
         outHeight2 = outHeight2 + $(this).height() / 2;
     });
-    $('#mf .section').first().css('height', $('#mf').outerHeight() - outHeight2);
+    $('#mf .section').first().css('height', $(window).outerHeight() - outHeight2 - 60);
 
     $('.slinky').slinky();
 
