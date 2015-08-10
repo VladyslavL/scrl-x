@@ -1,0 +1,112 @@
+.wow {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated,
+.mobile_animation{
+  animation: none !important;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.duration1{
+  animation-duration: 1s;
+}
+
+.delay05{
+  animation-delay: 0.5s;
+}
+
+.delay1{
+  animation-delay: 1s;
+}
+.delay15{
+  animation-delay: 1.5s;
+}
+
+.delay175{
+  animation-delay: 1.75s;
+}
+
+.delay2{
+  animation-delay: 2s;
+}
+
+.delay225{
+  animation-delay: 2.25s;
+}
+
+.delay25{
+  animation-delay: 2.5s;
+}
+
+.delay275{
+  animation-delay: 2.75s;
+}
+
+.delay3{
+  animation-delay: 3s;
+}
+
+.delay35{
+  animation-delay: 3.5s;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+

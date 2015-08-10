@@ -1,0 +1,3186 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mobile {
+  display: none;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+}
+
+.clearfix {
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+#wrap {
+  height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main {
+  height: 100%;
+  width: 78.5%;
+  float: left;
+  -webkit-box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+     -moz-box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+          box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+  position: relative;
+}
+
+.mainHeader {
+  width: 100%;
+  height: 60px;
+  background: #000;
+  position: relative;
+  z-index: 50;
+}
+
+.mainHeader .logo {
+  float: left;
+  margin-left: 55px;
+  margin-top: 17px;
+  cursor: pointer;
+}
+
+.mainHeader p {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.125em;
+  line-height: 60px;
+  float: left;
+  margin-left: 120px;
+}
+
+.textContent {
+  width: 100%;
+  height: 66%;
+  position: relative;
+  -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+       -o-transition: all 0.6s;
+          transition: all 0.6s;
+}
+
+.textContent h1 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.938em;
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  color: #384047;
+  max-width: 960px;
+  padding: 0 10px 28px 10px;
+  margin: 0 auto;
+  -webkit-transition: all 1s;
+     -moz-transition: all 1s;
+       -o-transition: all 1s;
+          transition: all 1s;
+}
+
+.textContent .dt {
+  display: table;
+  width: 100%;
+  height: 50%;
+}
+
+.textContent .dt .dtc {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.subText {
+  padding-left: 70px;
+}
+
+.subText p {
+  float: left;
+  font-family: "Lato", sans-serif;
+  font-size: 0.938em;
+  color: #000;
+}
+
+.subText span {
+  float: left;
+  font-family: "Lato", sans-serif;
+  font-size: 1.375em;
+  line-height: 1;
+  margin-top: 8px;
+  position: relative;
+  padding: 0 15px;
+}
+
+.subText span:before {
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: #909a9f;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+}
+
+.subText span:after {
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: #909a9f;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+}
+
+.imgBlock {
+  width: 530px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -270px;
+}
+
+.imgBlock img {
+  float: left;
+  margin-left: 9px;
+}
+
+.imgBlock img:first-child {
+  margin-left: 0;
+}
+
+.plashkaWrap {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  top: 0;
+  -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+       -o-transition: all 0.6s;
+          transition: all 0.6s;
+  -webkit-backface-visibility: hidden;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  background-image: url("../img/pv_bg.jpg");
+}
+
+.plashkaWrap#mf {
+  top: 50%;
+  z-index: 11;
+  background-image: url("../img/mf_bg.jpg");
+}
+
+.plashkaWrap .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  z-index: 2;
+  -webkit-transition: opacity 0.4s ease-out;
+     -moz-transition: opacity 0.4s ease-out;
+       -o-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
+}
+
+.plashkaWrap:hover .plashka .textBlock .header {
+  left: -20%;
+}
+
+.plashkaWrap:hover .plashka .textBlock p.text span.dtc span.separator {
+  opacity: 0.32;
+  filter: alpha(opacity=32);
+  -webkit-transition: all 0.4s 0.2s ease-out;
+     -moz-transition: all 0.4s 0.2s ease-out;
+       -o-transition: all 0.4s 0.2s ease-out;
+          transition: all 0.4s 0.2s ease-out;
+}
+
+.plashkaWrap:hover .plashka .textBlock p.text span.dtc span.fll {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.6s 0.4s ease-out;
+     -moz-transition: all 0.6s 0.4s ease-out;
+       -o-transition: all 0.6s 0.4s ease-out;
+          transition: all 0.6s 0.4s ease-out;
+}
+
+.plashkaWrap:hover .plashka p.mark span.line {
+  opacity: 0.32;
+  filter: alpha(opacity=32);
+}
+
+.plashkaWrap:hover .plashka p.mark span.inner {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.plashkaWrap:hover .plashka.mf .header {
+  left: -14%;
+}
+
+.plashkaWrap:hover .mask {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.plashkaWrap .plashka {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+       -o-transition: all 0.6s;
+          transition: all 0.6s;
+  -webkit-backface-visibility: hidden;
+}
+
+.plashkaWrap .plashka .mark {
+  position: absolute;
+  width: 78px;
+  height: 80px;
+  left: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: #fff;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 1.875em;
+  font-style: italic;
+  line-height: 84px;
+  text-transform: uppercase;
+  -webkit-transition: top 0.6s 0s;
+     -moz-transition: top 0.6s 0s;
+       -o-transition: top 0.6s 0s;
+          transition: top 0.6s 0s;
+  z-index: 3;
+  background: url("../img/polygon.png") center center no-repeat;
+}
+
+.plashkaWrap .plashka .mark span.line {
+  display: block;
+  width: 1px;
+  height: 600px;
+  background: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  -webkit-transition: opacity 0.4s ease-out;
+     -moz-transition: opacity 0.4s ease-out;
+       -o-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
+}
+
+.plashkaWrap .plashka .mark span.inner {
+  display: block;
+  width: 64px;
+  height: 64px;
+  top: 8px;
+  left: 7px;
+  position: absolute;
+  background: url("../img/polygon_2.png") center center no-repeat;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s ease-out;
+     -moz-transition: opacity 0.4s ease-out;
+       -o-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
+}
+
+.plashkaWrap .plashka .textBlock {
+  height: 100px;
+  width: 700px;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  margin: -50px 0px 0 -350px;
+  -webkit-transition: all 0.6s ease-out;
+     -moz-transition: all 0.6s ease-out;
+       -o-transition: all 0.6s ease-out;
+          transition: all 0.6s ease-out;
+}
+
+.plashkaWrap .plashka .textBlock .header {
+  line-height: 1;
+  height: 100%;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 2.625em;
+  font-style: italic;
+  color: #fff;
+  margin: 0 auto;
+  display: table;
+  position: relative;
+  left: 0;
+  -webkit-transition: all 0.4s ease-out;
+     -moz-transition: all 0.4s ease-out;
+       -o-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
+}
+
+.plashkaWrap .plashka .textBlock .header span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.plashkaWrap .plashka .textBlock p.text {
+  height: 100px;
+  width: 370px;
+  position: absolute;
+  top: 0;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  display: table;
+  right: 50%;
+  margin-right: -370px;
+}
+
+.plashkaWrap .plashka .textBlock p.text span.dtc {
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.plashkaWrap .plashka .textBlock p.text span.dtc span.separator {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  background: #fff;
+  margin: 0 24px 0 25px;
+  -webkit-transition: all 0.1s ease-out;
+     -moz-transition: all 0.1s ease-out;
+       -o-transition: all 0.1s ease-out;
+          transition: all 0.1s ease-out;
+}
+
+.plashkaWrap .plashka .textBlock p.text span.dtc span.fll {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.938em;
+  text-align: left;
+  width: 320px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  line-height: 1.15;
+  -webkit-transition: all 0.2s ease-out;
+     -moz-transition: all 0.2s ease-out;
+       -o-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+}
+
+.wrapper {
+  height: 34%;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.6s;
+     -moz-transition: all 0.6s;
+       -o-transition: all 0.6s;
+          transition: all 0.6s;
+}
+
+#pv .slinky .section:nth-child(2) .header {
+  background-color: #696a6d;
+}
+
+#pv .slinky .section:nth-child(3) .header {
+  background-color: #6cb336;
+}
+
+#pv .slinky .section:nth-child(4) .header {
+  background-color: #5fa42f;
+}
+
+#pv .slinky .section:nth-child(5) .header {
+  background-color: #549329;
+}
+
+#mf .slinky .section:nth-child(2) .header {
+  background-color: #696a6d;
+}
+
+#mf .slinky .section:nth-child(3) .header {
+  background-color: #5d5e62;
+}
+
+#mf .slinky .section:nth-child(4) .header {
+  background-color: #6ab536;
+}
+
+#mf .slinky .section:nth-child(5) .header {
+  background-color: #5fa42f;
+}
+
+#mf .slinky .section:nth-child(6) .header {
+  background-color: #549329;
+}
+
+#mf .slinky .section:nth-child(7) .header {
+  background-color: #4c8524;
+}
+
+.slinky {
+  position: absolute;
+  top: 300px;
+  z-index: 20;
+  overflow: hidden;
+  width: 104%;
+  height: 100%;
+  -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+       -o-transition: all 0.4s;
+          transition: all 0.4s;
+}
+
+.slinky .nav {
+  height: 100%;
+  overflow: auto;
+}
+
+.slinky .section {
+  background: #fff;
+  cursor: pointer;
+}
+
+.slinky .section.no-scroll {
+  background-color: transparent;
+}
+
+.slinky .header {
+  height: 85px;
+  width: 100%;
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.slinky .header span {
+  float: left;
+  font-size: 4.063em;
+  padding-left: 50px;
+  font-family: "Crimson Text", serif;
+  padding-top: 11px;
+}
+
+.slinky .header h4 {
+  float: left;
+  font-family: "Crimson Text", serif;
+  font-size: 1.563em;
+  padding-left: 50px;
+  padding-top: 28px;
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.slinky .header h4.mobile_text br {
+  display: none;
+}
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer {
+  height: 165px;
+  background: #fff;
+  position: relative;
+  padding: 40px 210px 0 155px;
+  -webkit-box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+     -moz-box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+          box-shadow: 5px 0 5px -3px rgba(7, 7, 7, 0.14);
+}
+
+footer img.logo {
+  position: absolute;
+}
+
+footer img.logo.incyte {
+  top: 13px;
+  left: 28px;
+}
+
+footer img.logo.jakafi {
+  top: 27px;
+  right: 39px;
+}
+
+footer .copy {
+  font-family: "Lato", sans-serif;
+  font-size: 0.813em;
+  line-height: 19px;
+  margin-bottom: 22px;
+  color: #909a9f;
+}
+
+footer .licText {
+  font-family: "Lato", sans-serif;
+  font-size: 0.688em;
+  line-height: 13px;
+  color: #909a9f;
+}
+
+/*===============================
+=            SIDEBAR            =
+===============================*/
+.sidebar {
+  padding: 20px 27px 110px 27px;
+  height: 100%;
+  width: 21.5%;
+  float: right;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar .scroll {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: url("../img/scroll.png") bottom center no-repeat;
+}
+
+.sidebar .inner {
+  overflow: auto;
+  height: 100%;
+  position: relative;
+}
+
+.sidebar .inner h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 19px;
+  color: #384047;
+}
+
+.sidebar .inner p.text {
+  font-family: "Lato", sans-serif;
+  margin-top: 16px;
+  line-height: 1.2;
+  font-size: 1.125em;
+  color: #384047;
+}
+
+.sidebar .inner hr {
+  border: 1px dashed #d6dadc;
+  margin: 30px 0;
+}
+
+.sidebar .inner ul {
+  padding-left: 15px;
+}
+
+.sidebar .inner ul li {
+  list-style: inherit outside;
+}
+
+.sidebar .bg {
+  position: absolute;
+  width: 100%;
+  height: 66px;
+  background: url("../img/sidebar_bg.png") center center repeat-x;
+  bottom: 110px;
+  left: 10px;
+}
+
+/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+/*
+CONTENTS: 
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+*/
+/* 
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCustomScrollbar {
+  -ms-touch-action: none;
+  touch-action: none;
+  /* MSPointer events - direct all pointer events to js */
+}
+
+.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+
+.mCustomScrollBox {
+  /* contains plugin's markup */
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: none;
+  direction: ltr;
+}
+
+.mCSB_container {
+  /* contains the original content */
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+2. VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCSB_inside > .mCSB_container {
+  margin-right: 30px;
+}
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+}
+
+/* non-visible scrollbar */
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container {
+  /* RTL direction/left-side scrollbar */
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-left: 0;
+}
+
+/* RTL direction/left-side scrollbar */
+.mCSB_scrollTools {
+  /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+  position: absolute;
+  width: 16px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+  right: -26px !important;
+}
+
+/* scrollbar position: outside */
+.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  /* RTL direction/left-side scrollbar */
+  right: auto;
+  left: 0;
+}
+
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  left: -26px;
+}
+
+/* RTL direction/left-side scrollbar (scrollbar position: outside) */
+.mCSB_scrollTools .mCSB_draggerContainer {
+  /* contains the draggable element and dragger rail markup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 20px 0;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+  /* the draggable element */
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  /* minimum dragger height */
+  z-index: 1;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  /* the dragger element */
+  position: relative;
+  width: 4px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 12px;
+  /* auto-expanded scrollbar */
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 8px;
+  /* auto-expanded scrollbar */
+}
+
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown {
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.mCSB_scrollTools .mCSB_buttonDown {
+  bottom: 0;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR 
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.mCSB_horizontal.mCSB_outside > .mCSB_container {
+  min-height: 100%;
+}
+
+.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+
+/* non-visible scrollbar */
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  width: auto;
+  height: 16px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: -26px;
+}
+
+/* scrollbar position: outside */
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+  margin: 0 20px;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 30px;
+  /* minimum dragger width */
+  height: 100%;
+  left: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  /* auto-expanded scrollbar */
+  margin: 2px auto;
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 8px;
+  /* auto-expanded scrollbar */
+  margin: 4px 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+  left: 0;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  right: 0;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+4. VERTICAL AND HORIZONTAL SCROLLBARS 
+yx-axis 
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCSB_container_wrapper {
+  position: absolute;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.mCSB_container_wrapper > .mCSB_container {
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 20px;
+}
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 20px;
+}
+
+/* non-visible horizontal scrollbar */
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 0;
+}
+
+/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 0;
+}
+
+/* RTL direction/left-side scrollbar */
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 20px;
+}
+
+/* non-visible scrollbar/RTL direction/left-side scrollbar */
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 0;
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper {
+  /* RTL direction/left-side scrollbar */
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container {
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container {
+  padding-bottom: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+  /* non-visible scrollbar */
+  margin-left: 0;
+}
+
+/* non-visible horizontal scrollbar */
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+5. TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight {
+  -webkit-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
+  -webkit-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+/* 
+	----------------------------------------
+	6.1 THEMES 
+	----------------------------------------
+	*/
+/* default theme ("light") */
+.mCSB_scrollTools {
+  opacity: 0.75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 0;
+  filter: "alpha(opacity=0)";
+  -ms-filter: "alpha(opacity=0)";
+}
+
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.mCustomScrollBox:hover > .mCSB_scrollTools,
+.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=100)";
+  -ms-filter: "alpha(opacity=100)";
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  filter: "alpha(opacity=85)";
+  -ms-filter: "alpha(opacity=85)";
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight {
+  background-image: url(mCSB_buttons.png);
+  /* css sprites */
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+
+.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 0;
+  /* 
+		sprites locations 
+		light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
+		dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
+		*/
+}
+
+.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -20px;
+  /* 
+		sprites locations
+		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
+		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
+		*/
+}
+
+.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -40px;
+  /* 
+		sprites locations 
+		light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
+		dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
+		*/
+}
+
+.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -56px;
+  /* 
+		sprites locations 
+		light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
+		dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
+		*/
+}
+
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover {
+  opacity: 0.75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active {
+  opacity: 0.9;
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+
+/* theme: "dark" */
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+
+/* ---------------------------------------- */
+/* theme: "light-2", "dark-2" */
+.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px 0;
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -20px;
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -40px;
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -56px;
+}
+
+/* theme: "dark-2" */
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px 0;
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -20px;
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -40px;
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -56px;
+}
+
+/* ---------------------------------------- */
+/* theme: "light-thick", "dark-thick" */
+.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 4px;
+  margin: 6px 0;
+}
+
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 6px;
+  margin: 5px auto;
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px 0;
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -20px;
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -40px;
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -56px;
+}
+
+/* theme: "dark-thick" */
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px 0;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -20px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -40px;
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -56px;
+}
+
+/* ---------------------------------------- */
+/* theme: "light-thin", "dark-thin" */
+.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 2px;
+}
+
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+}
+
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 2px;
+  margin: 7px auto;
+}
+
+/* theme "dark-thin" */
+.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+
+/* ---------------------------------------- */
+/* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger {
+  height: 14px;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 14px;
+  margin: 0 1px;
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 14px;
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 14px;
+  margin: 1px 0;
+}
+
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 16px;
+  /* auto-expanded scrollbar */
+  height: 16px;
+  margin: -1px 0;
+}
+
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 4px;
+  /* auto-expanded scrollbar */
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 16px;
+  /* auto-expanded scrollbar */
+  width: 16px;
+  margin: 0 -1px;
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 4px;
+  /* auto-expanded scrollbar */
+  margin: 6px 0;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 -72px;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -92px;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -112px;
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -128px;
+}
+
+/* theme "rounded-dark", "rounded-dots-dark" */
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px -72px;
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -92px;
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -112px;
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -128px;
+}
+
+/* theme "rounded-dots", "rounded-dots-dark" */
+.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail {
+  width: 4px;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  background-color: transparent;
+  background-position: center;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==");
+  background-repeat: repeat-y;
+  opacity: 0.3;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  height: 4px;
+  margin: 6px 0;
+  background-repeat: repeat-x;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px -72px;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -92px;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -112px;
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -128px;
+}
+
+/* theme "rounded-dots-dark" */
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=");
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px -72px;
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -92px;
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -112px;
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -128px;
+}
+
+/* ---------------------------------------- */
+/* theme "3d", "3d-dark", "3d-thick", "3d-thick-dark" */
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-y;
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* theme "3d", "3d-dark" */
+.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger,
+.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 70px;
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 70px;
+}
+
+.mCS-3d.mCSB_scrollTools,
+.mCS-3d-dark.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  width: 8px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.5), inset -1px 0 1px rgba(255, 255, 255, 0.2);
+     -moz-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.5), inset -1px 0 1px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.5), inset -1px 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #555;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 8px;
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 8px;
+  margin: 4px 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 8px;
+  margin: 4px auto;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+
+/* theme "3d-dark" */
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+
+/* ---------------------------------------- */
+/* theme: "3d-thick", "3d-thick-dark" */
+.mCS-3d-thick.mCSB_scrollTools,
+.mCS-3d-thick-dark.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+
+.mCS-3d-thick.mCSB_scrollTools,
+.mCS-3d-thick-dark.mCSB_scrollTools,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical,
+.mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+  right: 1px;
+}
+
+.mCS-3d-thick.mCSB_scrollTools_vertical,
+.mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+  -webkit-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+  bottom: 1px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+     -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+          box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+  width: 12px;
+  margin: 2px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #555;
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  width: auto;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+
+/* theme: "3d-thick-dark" */
+.mCS-3d-thick-dark.mCSB_scrollTools {
+  -webkit-box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.2);
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #777;
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+
+/* ---------------------------------------- */
+/* theme: "minimal", "minimal-dark" */
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  right: 0;
+  margin: 12px 0;
+}
+
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: 0;
+  margin: 0 12px;
+}
+
+/* RTL direction/left-side scrollbar */
+.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical,
+.mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+  left: 0;
+  right: auto;
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+
+.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 50px;
+}
+
+.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger,
+.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 50px;
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+
+/* theme: "minimal-dark" */
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+
+/* ---------------------------------------- */
+/* theme "light-3", "dark-3" */
+.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+  width: 6px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+}
+
+.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 6px;
+  margin: 5px 0;
+}
+
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 12px;
+}
+
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 12px;
+  margin: 2px 0;
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+
+/* theme "dark-3" */
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+
+/* ---------------------------------------- */
+/* theme "inset", "inset-dark", "inset-2", "inset-2-dark", "inset-3", "inset-3-dark" */
+.mCS-inset.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  width: 12px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  margin: 3px 5px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 6px;
+  margin: 5px 3px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 12px;
+  margin: 2px 0;
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+
+/* theme "inset-dark", "inset-2-dark", "inset-3-dark" */
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+
+/* theme "inset-2", "inset-2-dark" */
+.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+  border-color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* theme "inset-3", "inset-3-dark" */
+.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---------------------------------------- */
+.wow {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+       animation-fill-mode: both;
+}
+
+.animated,
+.mobile_animation {
+  -webkit-animation: none !important;
+     -moz-animation: none !important;
+       -o-animation: none !important;
+          animation: none !important;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+       animation-name: fadeIn;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+       animation-name: fadeInUp;
+}
+
+.duration1 {
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.delay05 {
+  -webkit-animation-delay: 0.5s;
+     -moz-animation-delay: 0.5s;
+       -o-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.delay15 {
+  -webkit-animation-delay: 1.5s;
+     -moz-animation-delay: 1.5s;
+       -o-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.delay175 {
+  -webkit-animation-delay: 1.75s;
+     -moz-animation-delay: 1.75s;
+       -o-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+     -moz-animation-delay: 2s;
+       -o-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.delay225 {
+  -webkit-animation-delay: 2.25s;
+     -moz-animation-delay: 2.25s;
+       -o-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.delay25 {
+  -webkit-animation-delay: 2.5s;
+     -moz-animation-delay: 2.5s;
+       -o-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.delay275 {
+  -webkit-animation-delay: 2.75s;
+     -moz-animation-delay: 2.75s;
+       -o-animation-delay: 2.75s;
+          animation-delay: 2.75s;
+}
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+     -moz-animation-delay: 3s;
+       -o-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.delay35 {
+  -webkit-animation-delay: 3.5s;
+     -moz-animation-delay: 3.5s;
+       -o-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+         transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+         transform: none;
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -o-transform: none;
+       transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+         transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+      -o-transform: none;
+         transform: none;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1225px) and (max-height: 1000px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1224px) and (max-height: 1000px) {
+  html {
+    font-size: 12px;
+  }
+  .subText {
+    padding-right: 20px;
+    padding-left: 0;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 1225px) and (min-width: 1023px) {
+  .plashkaWrap .plashka:hover .textBlock .header {
+    left: -17%;
+  }
+  .plashkaWrap .plashka:hover.mf .header {
+    left: -12%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+  .main {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .subText {
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .plashkaWrap .plashka:hover .textBlock .header {
+    left: -17%;
+  }
+  .plashkaWrap .plashka:hover.mf .header {
+    left: -12%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .subText {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-height: 768px) and (min-width: 1024px) {
+  .imgBlock {
+    height: 150px;
+    width: 400px;
+    margin-left: -200px;
+  }
+  .imgBlock img {
+    display: block;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 769px) {
+  .textContent .dt {
+    height: 40%;
+  }
+}
+
+@media screen and (min-width: 1279px) and (max-height: 768px) {
+  .mf_opened .this .plashka div.textBlock {
+    margin-top: -210px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pv_opened .textContent {
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened .wrapper {
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened .this {
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened .this .mask {
+    opacity: 0.3 !important;
+    filter: alpha(opacity=30) !important;
+  }
+  .pv_opened .this .plashka {
+    height: 100% !important;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock {
+    top: 50%;
+    margin-top: -220px;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock .header {
+    left: 0 !important;
+    font-size: 600%;
+    -webkit-transition: left 0.6s, font-size 0.6s 0.6s;
+       -moz-transition: left 0.6s, font-size 0.6s 0.6s;
+         -o-transition: left 0.6s, font-size 0.6s 0.6s;
+            transition: left 0.6s, font-size 0.6s 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock p.text {
+    right: -1000%;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock p.text span.fll {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+  }
+  .pv_opened .this .plashka .textBlock p.text span.separator {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+  }
+  .pv_opened .this .plashka .mark {
+    top: 80px;
+    -webkit-transition: top 0.6s 0.6s;
+       -moz-transition: top 0.6s 0.6s;
+         -o-transition: top 0.6s 0.6s;
+            transition: top 0.6s 0.6s;
+  }
+  .pv_opened .this .plashka .mark span.line {
+    opacity: 0.32;
+    filter: alpha(opacity=32);
+  }
+  .pv_opened .this .plashka .mark span.inner {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .pv_opened .this .slinky {
+    top: 0;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .pv_opened #mf {
+    top: 100% !important;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened .textContent {
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened .wrapper {
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened .this {
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+    top: 0 !important;
+  }
+  .mf_opened .this .mask {
+    opacity: 0.3 !important;
+    filter: alpha(opacity=30) !important;
+  }
+  .mf_opened .this .plashka {
+    height: 100% !important;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock {
+    top: 50%;
+    margin-top: -305px;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock .header {
+    left: 0 !important;
+    font-size: 600%;
+    -webkit-transition: left 0.6s, font-size 0.6s 0.6s;
+       -moz-transition: left 0.6s, font-size 0.6s 0.6s;
+         -o-transition: left 0.6s, font-size 0.6s 0.6s;
+            transition: left 0.6s, font-size 0.6s 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock p.text {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    right: -1000%;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock p.text span.fll {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+  }
+  .mf_opened .this .plashka .textBlock p.text span.separator {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+  }
+  .mf_opened .this .plashka .mark {
+    top: 80px;
+    -webkit-transition: top 0.6s 0.6s;
+       -moz-transition: top 0.6s 0.6s;
+         -o-transition: top 0.6s 0.6s;
+            transition: top 0.6s 0.6s;
+  }
+  .mf_opened .this .plashka .mark span.line {
+    opacity: 0.32;
+    filter: alpha(opacity=32);
+  }
+  .mf_opened .this .plashka .mark span.inner {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .mf_opened .this .slinky {
+    top: 0;
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+  .mf_opened #pv {
+    -webkit-transition: all 0.6s 0.6s;
+       -moz-transition: all 0.6s 0.6s;
+         -o-transition: all 0.6s 0.6s;
+            transition: all 0.6s 0.6s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 11px;
+  }
+  .mobile {
+    display: block;
+  }
+  .mobile.botles {
+    margin: 20px auto 22px auto;
+    text-align: center;
+  }
+  .mobile.isi {
+    padding: 45px 20px 40px 20px;
+    font-size: 120%;
+  }
+  .mobile.isi h3 {
+    font-family: "Lato", sans-serif;
+    color: #384047;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin-bottom: 15px;
+  }
+  .mobile.isi p.text {
+    font-family: "Lato", sans-serif;
+    font-size: 0.938em;
+    margin-top: 16px;
+    color: #384047;
+  }
+  .mobile.isi hr {
+    border: 1px dashed #d6dadc;
+    margin: 30px 0;
+  }
+  .mobile.isi ul {
+    padding-left: 15px;
+  }
+  .mobile.isi ul li {
+    list-style: inherit outside;
+  }
+  .mobile_hidden {
+    display: none;
+  }
+  .textContent {
+    overflow: auto;
+    height: 70%;
+  }
+  .textContent h1 {
+    font-size: 170%;
+  }
+  .textContent .subText {
+    text-align: center;
+    padding: 0 20px;
+  }
+  .textContent .subText p {
+    float: none;
+    font-size: 120%;
+    padding: 0 20px;
+  }
+  .textContent .subText p br {
+    display: none;
+  }
+  .textContent .subText span {
+    float: none;
+    display: inline-block;
+    margin: 15px auto;
+  }
+  .textContent .subText span:after {
+    width: 40px;
+    height: 1px;
+    left: auto;
+    bottom: 50%;
+    right: -30px;
+  }
+  .textContent .subText span:before {
+    width: 40px;
+    height: 1px;
+    top: auto;
+    bottom: 50%;
+    left: -30px;
+  }
+  .wrapper {
+    height: 30%;
+  }
+  .plashkaWrap .plashka {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .plashkaWrap .plashka .mark {
+    display: none;
+  }
+  .plashkaWrap .plashka .textBlock {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    left: auto;
+    top: auto;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+    padding: 0;
+  }
+  .plashkaWrap .plashka .textBlock .header {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    left: auto !important;
+    text-align: center;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .plashkaWrap .plashka .textBlock .header > span {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .plashkaWrap .plashka .textBlock p.text {
+    position: static;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .plashkaWrap .plashka .textBlock p.text span.dtc {
+    display: inline-block;
+  }
+  .plashkaWrap .plashka .textBlock p.text span.dtc span.separator {
+    display: none;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .plashkaWrap .plashka .textBlock p.text span.dtc span.fll {
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .mainHeader {
+    height: 90px;
+    text-align: center;
+  }
+  .mainHeader .logo {
+    float: none;
+    margin: 12px 0 10px;
+  }
+  .mainHeader p {
+    float: none;
+    margin: 0;
+    line-height: 1.2;
+  }
+  footer {
+    display: none;
+  }
+  .pv_opened .mainHeader {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    overflow: hidden;
+    padding-top: 5px;
+  }
+  .pv_opened .mainHeader p {
+    display: none;
+  }
+  .pv_opened .textContent {
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .wrapper {
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .mask {
+    opacity: 0.3 !important;
+    filter: alpha(opacity=30) !important;
+  }
+  .pv_opened .this {
+    height: 100%;
+    position: relative;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .this .plashka {
+    height: 100% !important;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock {
+    top: 0;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+    vertical-align: top;
+    padding-top: 140px;
+  }
+  .pv_opened .this .plashka .textBlock .header {
+    font-size: 350%;
+    -webkit-transition: font-size 0.6s;
+       -moz-transition: font-size 0.6s;
+         -o-transition: font-size 0.6s;
+            transition: font-size 0.6s;
+  }
+  .pv_opened .this .plashka .textBlock p.text {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    right: -1000%;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .pv_opened .this .plashka .mark {
+    top: 70px;
+    left: 50%;
+    display: block;
+    margin-left: -40px;
+    -webkit-transition: all 0.6s 0.1s !important;
+       -moz-transition: all 0.6s 0.1s !important;
+         -o-transition: all 0.6s 0.1s !important;
+            transition: all 0.6s 0.1s !important;
+    -webkit-animation-delay: 0.2s;
+       -moz-animation-delay: 0.2s;
+         -o-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .pv_opened .this .plashka .mark span.line {
+    display: none;
+  }
+  .pv_opened .this .plashka .mark span.inner {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .pv_opened .this .slinky {
+    top: 0;
+    -webkit-transition: all 0.2s 0.3s;
+       -moz-transition: all 0.2s 0.3s;
+         -o-transition: all 0.2s 0.3s;
+            transition: all 0.2s 0.3s;
+  }
+  .pv_opened #mf {
+    height: 0 !important;
+    top: 100% !important;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .mainHeader {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    overflow: hidden;
+    padding-top: 5px;
+  }
+  .mf_opened .mainHeader p {
+    display: none;
+  }
+  .mf_opened .textContent {
+    height: 60px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .mask {
+    opacity: 0.3 !important;
+    filter: alpha(opacity=30) !important;
+  }
+  .mf_opened .wrapper {
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this {
+    height: 100%;
+    position: relative;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this#mf {
+    top: 0;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this .plashka {
+    height: 100% !important;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock {
+    top: 0;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+    vertical-align: top;
+    padding-top: 140px;
+  }
+  .mf_opened .this .plashka .textBlock .header {
+    font-size: 350%;
+    -webkit-transition: font-size 0.6s;
+       -moz-transition: font-size 0.6s;
+         -o-transition: font-size 0.6s;
+            transition: font-size 0.6s;
+  }
+  .mf_opened .this .plashka .textBlock p.text {
+    opacity: 0 !important;
+    filter: alpha(opacity=0) !important;
+    right: -1000%;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .mf_opened .this .plashka .mark {
+    top: 70px;
+    left: 50%;
+    display: block;
+    margin-left: -40px;
+    -webkit-transition: all 0.6s 0.1s !important;
+       -moz-transition: all 0.6s 0.1s !important;
+         -o-transition: all 0.6s 0.1s !important;
+            transition: all 0.6s 0.1s !important;
+    -webkit-animation-delay: 0.2s;
+       -moz-animation-delay: 0.2s;
+         -o-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .mf_opened .this .plashka .mark span.line {
+    display: none;
+  }
+  .mf_opened .this .plashka .mark span.inner {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  .mf_opened .this .slinky {
+    top: 0;
+    -webkit-transition: all 0.2s 0.3s;
+       -moz-transition: all 0.2s 0.3s;
+         -o-transition: all 0.2s 0.3s;
+            transition: all 0.2s 0.3s;
+  }
+  .mf_opened #pv {
+    height: 0 !important;
+    top: 100% !important;
+    -webkit-transition: all 0.6s;
+       -moz-transition: all 0.6s;
+         -o-transition: all 0.6s;
+            transition: all 0.6s;
+  }
+  .slinky .header {
+    height: 85px;
+  }
+  .slinky .header span {
+    padding-top: 9px;
+    padding-left: 10px;
+  }
+  .slinky .header h4 {
+    padding-top: 18px;
+    padding-left: 20px;
+  }
+  .slinky .header h4.mobile_text {
+    padding-top: 6px;
+  }
+  .slinky .header h4.mobile_text br {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  html {
+    font-size: 9px;
+  }
+  .plashkaWrap .plashka .textBlock .header > span {
+    margin-bottom: 8px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

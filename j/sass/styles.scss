@@ -1,0 +1,632 @@
+@import "vars";
+
+@mixin opacity ($opacity) {
+	opacity: $opacity;
+  filter: alpha(opacity=$opacity * 100);
+}
+
+@mixin opacity2 ($opacity) {
+	opacity: $opacity !important;
+  filter: alpha(opacity=$opacity * 100) !important;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// -webkit-font-smoothing: antialiased;
+}
+
+.mobile{
+	display: none;
+}
+
+html{
+	height: 100%;
+	font-size: 16px;
+}
+
+body{
+	height: 100%;
+}
+
+.clearfix{
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+#wrap{
+	height: 100%;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main{
+	height: 100%;
+	width: 78.5%;
+	float: left;
+	box-shadow: 5px 0 5px -3px rgba(7,7,7,0.14);
+	position: relative;
+}
+
+.mainHeader{
+	width: 100%;
+	height: 60px;
+	background: #000;
+	position: relative;
+	z-index: 50;
+
+		.logo{
+			float: left;
+			margin-left: 55px;
+			margin-top: 17px;
+			cursor: pointer;
+		}
+
+		p{
+			color: #fff;
+			font-family: $Lato;
+			font-size: $fz18;
+			line-height: 60px;
+			float: left;
+			margin-left: 120px;
+		}
+}
+
+.textContent{
+	width: 100%;
+	height: 66%;
+	position: relative;
+	transition: all 0.6s;
+
+	
+		h1{
+			font-family: $Crimson;
+			font-size: $fz31;
+			text-align: center;
+			font-weight: 700;
+			font-style: italic;
+			color: #384047;
+			max-width: 960px;
+			padding: 0 10px 28px 10px;
+			margin: 0 auto;
+			transition: all 1s;
+
+		}
+
+		.dt{
+			display: table;
+			width: 100%;
+			height: 50%;
+
+				.dtc{
+					display: table-cell;
+					vertical-align: middle;
+				}
+		}
+}
+
+.subText{
+	padding-left: 70px;
+
+	p{
+		float: left;
+		font-family: $Lato;
+		font-size: $fz15;
+		color: #000;
+	}
+
+	span{
+		float: left;
+		font-family: $Lato;
+		font-size: $fz22;
+		line-height: 1;
+		margin-top: 8px;
+		position: relative;
+		padding: 0 15px;
+
+			&:before{
+				content: "";
+				width: 1px;
+				height: 18px;
+				background: #909a9f;
+				@include opacity(0.4);
+				position: absolute;
+				top: -20px;
+				left: 50%;
+			}
+
+			&:after{
+				content: "";
+				width: 1px;
+				height: 18px;
+				background: #909a9f;
+				@include opacity(0.4);
+				position: absolute;
+				bottom: -23px;
+				left: 50%;
+			}
+	}
+}
+
+.imgBlock{
+	width: 530px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -270px;
+
+		img{
+			float: left;
+			margin-left: 9px;
+
+				&:first-child{
+					margin-left: 0;
+				}
+		}
+}
+
+.plashkaWrap{
+	position: absolute;
+	width: 100%;
+	// min-height: 100%;
+	overflow: hidden;
+	z-index: 10;
+	top: 0;
+	transition: all 0.6s;
+	-webkit-backface-visibility: hidden;
+	background-size: cover;
+	background-image: url("../img/pv_bg.jpg");
+	// filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	// src='../img/pv_bg.jpg',
+	// sizingMethod='scale');
+
+	// -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	// src='../img/pv_bg.jpg',
+	// sizingMethod='scale')";
+
+		&#mf{
+			top:50%;
+			z-index: 11;
+			background-image: url("../img/mf_bg.jpg");
+			// filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			// src='../img/mf_bg.jpg',
+			// sizingMethod='scale');
+
+			// -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+			// src='../img/mf_bg.jpg',
+			// sizingMethod='scale')";
+		}
+
+		.mask{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #000;
+			@include opacity(0.3);
+			z-index: 2;
+			transition: opacity 0.4s ease-out;
+		}
+
+		&:hover{
+			.plashka{
+				.textBlock{
+					.header{
+						left: -20%;
+					}
+
+					p.text{
+						span.dtc{
+							span.separator{
+								@include opacity(0.32);
+
+								transition: all 0.4s 0.2s ease-out;
+							}
+
+							span.fll{
+								@include opacity(1);
+								transition: all 0.6s 0.4s ease-out;
+							}
+						}
+					}
+				}
+
+				p.mark{
+					span.line{
+						@include opacity(0.32);
+					}
+
+					span.inner{
+						@include opacity(1);
+					}
+				}
+
+				&.mf{
+					.header{
+						left: -14%;
+					}
+				}
+			}
+
+			.mask{
+					@include opacity(0);
+			}
+		}
+
+
+		.plashka{
+			width: 100%;
+			height: 50%;
+			overflow: hidden;
+			cursor: pointer;
+			position: relative;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			transition: all 0.6s;
+			-webkit-backface-visibility: hidden;
+
+				.mark{
+					position: absolute;
+					width: 78px;
+					height: 80px;
+					left: 25px;
+					top: 50%;
+					margin-top: -40px;
+					color: #fff;
+					text-align: center;
+					font-family: $Crimson;
+					font-size: $fz30;
+					font-style: italic;
+					line-height: 84px;
+					text-transform: uppercase;
+					transition: top 0.6s 0s;
+					z-index: 3;
+					background: url("../img/polygon.png") center center no-repeat;
+
+						span.line{
+							display: block;
+							width: 1px;
+							height: 600px;
+							background: #fff;
+							@include opacity(0);
+							position: absolute;
+							left: 50%;
+							top: 80px;
+							transition: opacity 0.4s ease-out;
+						}
+
+						span.inner{
+							display: block;
+							width: 64px;
+							height: 64px;
+							top: 8px;
+							left: 7px;
+							position: absolute;
+							background: url("../img/polygon_2.png") center center no-repeat;
+							@include opacity(0);
+							transition: opacity 0.4s ease-out;
+						}
+				}
+
+				.textBlock{
+					height: 100px;
+					width: 700px;
+					position: absolute;
+					z-index: 3;
+					left: 50%;
+					top: 50%;
+					margin: -50px -0px 0 -350px;
+					transition: all 0.6s ease-out;
+
+
+						.header{
+							line-height: 1;
+							height: 100%;
+							text-align: center;
+							font-family: $Crimson;
+							font-size: $fz42;
+							font-style: italic;
+							color: #fff;
+							margin: 0 auto;
+							display: table;
+							position: relative;
+							left: 0;
+							transition: all 0.4s ease-out;
+
+
+								span{
+									display: table-cell;
+									vertical-align: middle;
+								}
+						}
+
+						p.text{
+							height: 100px;
+							width: 370px;
+							position: absolute;
+							top: 0;
+							color: #fff;
+							font-family: $Lato;
+							font-weight: 400;
+							display: table;
+							right: 50%;
+							margin-right: -370px;
+
+							span.dtc{
+								height: 100%;
+								width: 100%;
+								display: table-cell;
+								vertical-align: middle;
+
+									span.separator{
+										display: inline-block;
+										vertical-align: middle;
+										height: 100%;
+										width: 1px;
+										@include opacity(0);
+										background: #fff;
+										margin: 0 24px 0 25px;
+										transition: all 0.1s ease-out;
+
+									}
+
+									span.fll{
+										display: inline-block;
+										vertical-align: middle;
+										font-size: $fz15;
+										text-align: left;
+										width: 320px;
+										@include opacity(0);
+										line-height: 1.15;
+										transition: all 0.2s ease-out;
+
+									}
+							}
+						}
+				}
+		}
+}
+
+.wrapper{
+	height: 34%;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.6s;
+}
+
+#pv{
+	.slinky{
+		.section.no-scroll{
+			// height: calc(100% - 340px) !important;
+		}
+
+		.section:nth-child(2) .header {
+		  background-color: #696a6d;
+		}
+
+		.section:nth-child(3) .header {
+			background-color: #6cb336;
+		}
+
+		.section:nth-child(4) .header {
+			background-color: #5fa42f;
+		}
+
+		.section:nth-child(5) .header {
+		  background-color: #549329;
+		}
+	}
+}
+
+#mf{
+	.slinky{
+		.section.no-scroll{
+			// height: calc(100% - 510px) !important;
+		}
+
+		.section:nth-child(2) .header {
+			background-color: #696a6d;
+		}
+
+		.section:nth-child(3) .header {
+			background-color: #5d5e62;
+		}
+
+		.section:nth-child(4) .header {
+			background-color: #6ab536;
+		}
+
+		.section:nth-child(5) .header {
+		  background-color: #5fa42f;
+		}
+
+		.section:nth-child(6) .header {
+		  background-color: #549329;
+		}
+
+		.section:nth-child(7) .header {
+		  background-color: #4c8524;
+		}
+	}
+}
+
+.slinky{
+	position: absolute;
+	top: 300px;
+  z-index: 20;
+  overflow: hidden;
+  width: 104%;
+  height: 100%;
+  transition: all 0.4s;
+
+	.nav {
+	  height: 100%;
+	  overflow: auto;
+	}
+
+	.section{
+		background: #fff;
+		cursor: pointer;
+
+			&.no-scroll{
+				background-color: transparent;
+				// height: calc(100% - 360px) !important;
+			}
+	}
+
+	.header {
+		height: 85px;
+		width: 100%;
+		color: #fff;
+		font-style: italic;
+		font-weight: normal;
+
+			&:hover{
+				// height: 105px;
+			}
+
+			span{
+				float: left;
+				font-size: $fz65;
+				padding-left: 50px;
+				font-family: $Crimson;
+				padding-top: 11px;
+			}
+
+			h4{
+				float: left;
+				font-family: $Crimson;
+				font-size: $fz25;
+				padding-left: 50px;
+				padding-top: 28px;
+				color: #fff;
+				font-style: italic;
+				font-weight: normal;
+
+					&.mobile_text{
+						br{
+							display: none; }
+					}
+			}
+	}
+
+	h4{
+		
+	}
+}
+
+/*==============================
+=            FOOTER            =
+==============================*/
+footer{
+	height: 165px;
+	background: #fff;
+	position: relative;
+	padding: 40px 210px 0 155px;
+	box-shadow: 5px 0 5px -3px rgba(7,7,7,0.14);
+
+
+		img.logo{
+			position: absolute;
+
+				&.incyte{
+					top: 13px;
+					left: 28px;
+				}
+
+				&.jakafi{
+					top: 27px;
+					right: 39px;
+				}
+		}
+
+		.copy{
+			font-family: $Lato;
+			font-size: $fz13;
+			line-height: 19px;
+			margin-bottom: 22px;
+			color: #909a9f;
+		}
+
+		.licText{
+			font-family: $Lato;
+			font-size: $fz11;
+			line-height: 13px;
+			color: #909a9f;
+		}
+}
+
+/*===============================
+=            SIDEBAR            =
+===============================*/
+.sidebar{
+	padding: 20px 27px 110px 27px;
+	height: 100%;
+	width: 21.5%;
+	float: right;
+	overflow: hidden;
+	position: relative;
+	// box-shadow: inset 5px 0 5px -3px rgba(7,7,7,0.14);
+
+	.scroll{
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		width: 100%;
+		height: 110px;
+		background: url("../img/scroll.png") bottom center no-repeat;
+	}
+
+	.inner{
+		overflow: auto;
+		height: 100%;
+		position: relative;
+
+			h3{
+				font-family: $Lato;
+				font-weight: 700;
+				font-size: $fz20;
+				line-height: 19px;
+				color: #384047;
+			}
+
+			p.text{
+				font-family: $Lato;
+				margin-top: 16px;
+				line-height: 1.2;
+				font-size: $fz18;
+				color: #384047;
+			}
+
+			hr{
+				border: 1px dashed #d6dadc;
+				margin: 30px 0;
+			}
+
+			ul{
+				padding-left: 15px;
+
+				li{
+					list-style: inherit outside;
+				}
+			}
+	}
+
+	.bg{
+		position: absolute;
+		width: 100%;
+		height: 66px;
+		background: url("../img/sidebar_bg.png") center center repeat-x;
+		bottom: 110px;
+		left: 10px;
+	}
+}
+
+@import "jquery.mCustomScrollbar";
+@import "animation";
+@import "responsive";
+
