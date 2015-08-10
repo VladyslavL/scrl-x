@@ -44,7 +44,7 @@ $(document).ready(function() {
     $('#pv .header').each(function () {
         outHeight3 = outHeight3 + $(this).outerHeight() * 0.7;
     });
-    $('#pv .section').first().css('height', $(window).outerHeight() - outHeight3 + 10);
+    $('#pv .section').first().css('height', $(window).outerHeight() - outHeight3 - 20);
 
     $('#mf .header').each(function () {
         outHeight2 = outHeight2 + $(this).outerHeight() * 0.7;
