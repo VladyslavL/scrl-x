@@ -53,68 +53,68 @@ $(document).ready(function() {
 
     $('.slinky').slinky();
 
-    $(".section > .header").on('click', function () {
-        var section = $(this).parent().not('.no-scroll');
-        var sections = [];
-        var selectSections = section.prevAll('.section');
-        for (var i = selectSections.length; i > 0; i--) {
-            var sec = $(selectSections[i - 1]);
-            var secHeader = sec.find('.header');
-            if (secHeader.inlineStyle("position") == "absolute"
-                    && secHeader.inlineStyle("top").length == 0) {
-                sections.push(sec);
-            }
-        }
-        sections.push(section);
-
-        var scroller = $('.nav');
-        for (var j = 0; j < sections.length; j++) {
-            if (sections[j] == undefined) {
-                return;
-            }
-
-            scroller.scrollTo(sections[j], {duration: 200, offsetTop: 0}, function () {
-                section.scroll();
-            });
-        }
-    });
-
-    $.fn.scrollTo = function (target, options, callback) {
-        if (typeof options == 'function' && arguments.length == 2) {
-            callback = options;
-            options = target;
-        }
-        var settings = $.extend({
-            scrollTarget: target,
-            offsetTop: 50,
-            duration: 500,
-            easing: 'swing'
-        }, options);
-        return this.each(function () {
-            var scrollPane = $(this);
-            var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
-            var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
-            scrollPane.animate({scrollTop: scrollY}, parseInt(settings.duration), settings.easing, function () {
-                if (typeof callback == 'function') {
-                    callback.call(this);
-                }
-            });
-        });
-    }
-
-    $.fn.inlineStyle = function (prop) {
-        return this.prop("style")[$.camelCase(prop)];
-    };
+    //$(".section > .header").on('click', function () {
+    //    var section = $(this).parent().not('.no-scroll');
+    //    var sections = [];
+    //    var selectSections = section.prevAll('.section');
+    //    for (var i = selectSections.length; i > 0; i--) {
+    //        var sec = $(selectSections[i - 1]);
+    //        var secHeader = sec.find('.header');
+    //        if (secHeader.inlineStyle("position") == "absolute"
+    //                && secHeader.inlineStyle("top").length == 0) {
+    //            sections.push(sec);
+    //        }
+    //    }
+    //    sections.push(section);
+    //
+    //    var scroller = $('.nav');
+    //    for (var j = 0; j < sections.length; j++) {
+    //        if (sections[j] == undefined) {
+    //            return;
+    //        }
+    //
+    //        scroller.scrollTo(sections[j], {duration: 200, offsetTop: 0}, function () {
+    //            section.scroll();
+    //        });
+    //    }
+    //});
+    //
+    //$.fn.scrollTo = function (target, options, callback) {
+    //    if (typeof options == 'function' && arguments.length == 2) {
+    //        callback = options;
+    //        options = target;
+    //    }
+    //    var settings = $.extend({
+    //        scrollTarget: target,
+    //        offsetTop: 50,
+    //        duration: 500,
+    //        easing: 'swing'
+    //    }, options);
+    //    return this.each(function () {
+    //        var scrollPane = $(this);
+    //        var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
+    //        var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
+    //        scrollPane.animate({scrollTop: scrollY}, parseInt(settings.duration), settings.easing, function () {
+    //            if (typeof callback == 'function') {
+    //                callback.call(this);
+    //            }
+    //        });
+    //    });
+    //}
+    //
+    //$.fn.inlineStyle = function (prop) {
+    //    return this.prop("style")[$.camelCase(prop)];
+    //};
 });
 
 
-var h = $(window).height();
-console.log(h);
-var pwh = $('.wrapper').height() / 2;
-
-$('.slinky').height(h - 60);
-$('.plashkaWrap').height(h - 60);
-$('.plashka').height(pwh);
+//var h = $(window).height();
+//console.log(h);
+//var pwh = $('.wrapper').height() / 2;
+//
+//$('.slinky').height(h - 60);
+//$('.plashkaWrap').height(h - 60);
+//$('.plashka').height(pwh);
 
 //(function($) {
 //  $(window).load(function() {
