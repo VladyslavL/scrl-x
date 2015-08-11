@@ -27,6 +27,7 @@
                 direction = 'UP';
 
             function refresh() {
+                scrollerHeight = $scroller.outerHeight();
                 var st = $(this).scrollTop();
                 if (st > lastScroll) {
                     direction = "DOWN";
