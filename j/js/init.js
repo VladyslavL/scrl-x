@@ -109,11 +109,10 @@ $(document).ready(function() {
 
 
 var h = $(window).height();
-console.log(h);
 var pwh = $('.wrapper').height() / 2;
 
-$('.slinky').height(h - 60);
-$('.plashkaWrap').height(h - 60);
+//$('.slinky').height(h - 60);
+//$('.plashkaWrap').height(h - 60);
 $('.plashka').height(pwh);
 
 //(function($) {
