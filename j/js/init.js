@@ -8,17 +8,17 @@ $(document).ready(function() {
 
 	var PW = h - 60;
     $('.plashkaWrap').css('height', PW);
-	$('.plashka').height(pwh);
+	$('.plashka').css('height', pwh);
 
   if(w <= 767) {
     $('.mobile_animation').addClass('wow');
     $('.mobile_animation').removeClass('mobile_animation');
-    $('.slinky').height(h - 60);
-    $('.plashkaWrap').height(h - 60);
+    $('.slinky').css('height', h - 60);
+    $('.plashkaWrap').css('height', h - 60);
 
   }else{
-    $('.slinky').height(h - 60);
-    $('.plashkaWrap').height(h - 60);
+    $('.slinky').css('height', h - 60);
+    $('.plashkaWrap').css('height', h - 60);
 
     // var PVarr = [PVheaders];
 
@@ -147,20 +147,20 @@ $(document).ready(function() {
 function addclass() {
   $('div.plashkaWrap').addClass('this');
   $('body').addClass('pv_opened');
-  $('div.wrapper').height($(window).height() - 60);
+  $('div.wrapper').css('height', $(window).outerHeight() - 60);
 }
 
 function addclass2() {
   $('div#mf').addClass('this');
   $('body').addClass('mf_opened');
-  $('div.wrapper').height($(window).height() - 60);
+  $('div.wrapper').css('height', $(window).outerHeight() - 60);
 }
 
 function addclassBody() {
   $('div.plashkaWrap').removeClass('this');
   $('body').removeClass('pv_opened');
   $('body').removeClass('mf_opened');
-  $('div.wrapper').height('34%');
+  $('div.wrapper').css('height', '34%');
 }
 
 
